@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="padel.css">
+    <title>PADEL</title>
+</head>
+<body>
+    <div class="padel-page">
+        <div class="links" id="Home">
+            <ul>
+                <li><a href="#Home">HOME</a></li>
+                <li><a href="#About">ABOUT</a></li>
+                <li><a href="#Images">IMAGES</a></li>
+                <li><a href="#Where">WHERE</a></li>
+            </ul>
+            <img src="photos/images.jpg" alt="photo not load">
+        </div>
+        <div class="about-padel" id="About">
+            <p>ABOUT THE PADEL</p>
+        </div>
+        <div class="info-about-padel">
+            <img src="photos/padel image.jpg" alt="photo not load">
+            <p >Padel is a sport which combines action with fun and social interaction. It’s a great sport for players of all ages and skills, as it is both quick and easy to pick up. Most players get the basics within the first half an hour of playing so that they can enjoy the game.  <br>  <br>Padel is not as dominated by strength, technique and serve as it happens in Tennis and therefore is an ideal game for men, women and youth to compete together. An important skill is match-craft, as points are won rather by strategy than by sheer strength and power. </p>
+            
+        </div>
+        <div class="about-padel">
+            <p style="background-color: black; color: white;">PADEL RACKET & BALL</p>
+        </div>
+        <div class="info-about-padel">
+            <p> The game is quick and easy to learn, making it a fun and addictive sport to play. Using a short, stringless padel racket with an elastic surface with holes and a low compression tennis ball, the service is made underarm. <br>  <br>Shots are played either before or after the ball bounces off the surrounding glass walls, adding a unique dimension to the sport over conventional tennis.</p>
+            <img src="photos/racket and ball.webp" alt="photo not load">
+        </div>
+
+        
+        <div class="all-images" id="Images">
+            <div class="text">
+                <p>photos of padel</p>
+            </div>
+
+            <div class="main">
+                <div class="slider">
+                    <img  name="slide" src="photos/1st-image.webp" alt="lost">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="Where" id="Where">
+            <div class="about-padel">
+                <p style="background-color: black; color: white;">WHERE TO PLAY IT</p>
+            </div>
+            <div class="all-details">
+                <div class="details">
+                    <p>location Name:El-Nozha Padel tennis</p>
+                    <p>location:Tanta Egypt</p>
+                    <p>Phone:01274442130</p>
+                    
+                </div>
+                <div class="details">
+                    <p>location Name:15-love Padel</p>
+                    <p>location:El Mahalla El Kubra, Gharbia</p>
+                    <p>Phone:0127 792 4440</p>
+                    
+                </div>
+                <div class="details">
+                    <p>location Name:Pro Padel Egypt Maadi Club</p>
+                    <p>location:Maadi sporting club gate 4</p>
+                    <p>Phone:0112 809 9322</p>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+
+    <script>  
+    var i = 0;
+    var images = [] ; 
+    var time = 2000 ;
+
+    //images list 
+    images[0]='photos/1st-image.webp'
+    images[1]='photos/2nd-image.jpg'
+    images[2]='photos/3rd-image.webp'
+    images[3]='photos/4th-image.jpg'
+    images[4]='photos/5th-image.jpeg'
+
+    //change image
+    function changeimg(){
+        document.slide.src=images[i];
+        if(i< images.length-1){
+            i++;
+        }else{
+            i=0;
+        }
+
+        setTimeout("changeimg()" , time);
+    }
+
+    window.onload=changeimg;
+    </script>
+    
+</body>
+</html>
